@@ -1,0 +1,12 @@
+<?php
+session_start();
+$idpro = $_SESSION['idpro'];
+$nombreempresa = $_SESSION['nombreempresa'];
+$ruta = $_SESSION['ruta'];
+
+if($idpro=='' or $nombreempresa == '' or $ruta == '')
+{
+$mensaje = "Es necesario loguearse";
+print "<meta http-equiv='refresh' content='0;url=login.php?mensaje=$mensaje'>";
+$todook= 0;
+}
